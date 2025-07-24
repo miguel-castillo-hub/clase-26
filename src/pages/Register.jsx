@@ -8,8 +8,7 @@ const Register = () => {
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
 
-
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     setError("")
     setSuccess("")
@@ -43,7 +42,8 @@ const Register = () => {
           <div>
             <label>Username: </label>
             <input
-              type="text" onChange={(e) => setUsername(e.target.value)}
+              type="text"
+              onChange={(e) => setUsername(e.target.value)}
               value={username}
             />
           </div>

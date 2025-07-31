@@ -31,8 +31,8 @@ const Dashboard = () => {
       image: ""
     }
 
-    // petición al backend mediante fetch -> método POST hhtps://fakeproductapi.com/products
-    const response = await fetch("hhtps://fakeproductapi.com/product", {
+    // petición al backend mediante fetch -> método POST https://fakeproductapi.com/products
+    const response = await fetch("https://fakeproductapi.com/product", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

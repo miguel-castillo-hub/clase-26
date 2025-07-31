@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Layout } from "../components/Layout"
+import { useAuth } from "../context/UserContext"
 
 const Login = () => {
   const [username, setUsername] = useState("")
@@ -31,13 +32,16 @@ const Login = () => {
     setPassword("")
   }
 
+  const { Login } = useAuth()
+
+
   return (
     <Layout background="red">
-      <h1>Login</h1>
+      <h1>Inicia sesión</h1>
 
       <section>
         <h2>Hola, bienvenido</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
           <div>
             <label>Correo Electrónico: </label>
             <input

@@ -4,6 +4,10 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.cabeza {
+  background-color: blue;
+}
+
 .cabeza img {
   width: 50%;
   height: auto;
@@ -13,15 +17,13 @@
 }
 
 .navegacion {
-  background: white;
+  background-color: white;
   width: 100%;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  color: rgb(0, 60, 255);
-  position: fixed;
   z-index: 100;
 }
 
@@ -31,7 +33,6 @@
 
 .cabeza nav ul {
   display: inline;
-  overflow: hidden;
 }
 
 .cabeza nav ul li {
@@ -39,9 +40,10 @@
   float: left;
   margin: 15px;
   color: cyan;
+  font-weight: 400;
 }
 
-.cabeza nav ul li Link {
+.cabeza nav ul li navlink {
   display: inline;
   color: cyan;
   text-decoration: none;
@@ -49,4 +51,86 @@
 
 .cabeza Link:hover {
   color: dodgerblue;
+}
+
+.cabeza nav ul li button {
+  background-color: blue;
+  color: white;
+}
+
+.casacompleto {
+  background-color: rgb(154, 187, 249);
+}
+
+.casa h1 {
+  color: darkblue;
+  font-size: 40px;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.casa p {
+  color: darkblue;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.elegirnos h2 {
+  font-size: 35px;
+  font-style: italic;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.elegirnos ul li {
+  background-color: rgb(219, 232, 255);
+  border-radius: 10px;
+  width: 600px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  margin: 20px;
+  list-style: none;
+}
+
+.elegirnos ul li h3 {
+  color: blue;
+  font-size: 30px;
+  font-style: italic;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+.elegirnos ul li p {
+  color: darkblue;
+  font-size: 20px;
+  display: flex;
+  padding: 30px;
+}
+
+.productostitulo {
+  color: darkblue;
+  font-size: 40px;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.productosparrafo {
+  color: darkblue;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
 }

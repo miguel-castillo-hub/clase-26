@@ -10,9 +10,9 @@ const Header = () => {
 
   return (
     <>
-      <header style={{ backgroundColor: "blue" }}>
+      <header style={{ backgroundColor: "blue" }} className="cabeza">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Imagen de logo" />
-        <nav>
+        <nav className="navegacion">
           <ul>
             {/* Solo mostrar si hay usuario logeado */}
             {

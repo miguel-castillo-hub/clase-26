@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Layout } from "../components/Layout"
+import { useAuth } from "../context/UserContext"
 
 const Register = () => {
   const [username, setUsername] = useState("")
@@ -7,8 +8,9 @@ const Register = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
+  const { register } = useAuth()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setError("")
     setSuccess("")
@@ -23,8 +25,9 @@ const Register = () => {
       email: email,
       password: password
     }
+    const response = await register(newUser)
 
-    console.log(newUser)
+    console.log(response)
     setSuccess("Usuario registrado")
 
     setUsername("")

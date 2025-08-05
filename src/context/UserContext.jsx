@@ -5,7 +5,7 @@ const UserContext = createContext()
 const UserProvider = (props) => {
   const [user, setUser] = useState(null)
 
-  const login = async () => {
+  const login = async (username, password) => {
     // realizar una petición al backend
     const response = await fetch("https:fakestoreapi.com/auth/login", {
       method: "POST",
@@ -23,12 +23,15 @@ const UserProvider = (props) => {
       return false
     }
   }
+  const register = async (newUser) => {
+    console.log("registrado", newUser)
+  }
   const logout = () => {
     setUser(null)
   }
 
   return (
-    <UserContext.Provider value={{ login, logout, user }}>
+    <UserContext.Provider value={{ login, register, logout, user }}>
       {props.children}
     </UserContext.Provider>
   )

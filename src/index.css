@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cabeza img {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navegacion {
+  background: white;
+  width: 100%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  color: rgb(0, 60, 255);
+  position: fixed;
+  z-index: 100;
+}
+
+.cabeza nav {
+  float: left;
+}
+
+.cabeza nav ul {
+  display: inline;
+  overflow: hidden;
+}
+
+.cabeza nav ul li {
+  display: inline;
+  float: left;
+  margin: 15px;
+  color: cyan;
+}
+
+.cabeza nav ul li Link {
+  display: inline;
+  color: cyan;
+  text-decoration: none;
+}
+
+.cabeza Link:hover {
+  color: dodgerblue;
+}

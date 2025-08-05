@@ -35,7 +35,8 @@ const Dashboard = () => {
     const response = await fetch("https://fakeproductapi.com/product", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        Authentication: token
       },
       body: JSON.stringify(newProduct)
     })

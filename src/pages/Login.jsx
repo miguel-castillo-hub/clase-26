@@ -1,39 +1,27 @@
+
 import { useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
   const [username, setUsername] = useState("")
-  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-  const [success, setSuccess] = useState("")
+  const { login } = useAuth()
+
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    e.preventDefault
-    setError("")
-    setSuccess("")
+    e.preventDefault()
+    console.log({ username, password })
+    const isLogin = login(username, password)
 
-    if (!email || !password) {
-      setError("Debes completar todos los campos")
-      return
+    if (isLogin) {
+      setUsername("")
+      setPassword("")
+      navigate("/")
     }
-
-    const user = {
-      username: username,
-      email: email,
-      password: password
-    }
-
-    console.log(user)
-    setSuccess("Usuario logeado")
-
-    setEmail("")
-    setPassword("")
   }
-
-  const { Login } = useAuth()
-
 
   return (
     <Layout background="red">
@@ -41,13 +29,13 @@ const Login = () => {
 
       <section>
         <h2>Hola, bienvenido</h2>
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleSubmit}>
           <div>
-            <label>Correo Electrónico: </label>
+            <label>Nombre de usuario: </label>
             <input
               type="text"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
+              onChange={(e) => setUsername(e.target.value)}
+              value={username}
             />
           </div>
           <div>
@@ -60,13 +48,6 @@ const Login = () => {
           </div>
           <button>Ingresar</button>
         </form>
-
-        {
-          error && <p style={{ color: "red" }}>{error}</p>
-        }
-        {
-          success && <p style={{ color: "yellow" }}>{success}</p>
-        }
       </section>
     </Layout>
   )

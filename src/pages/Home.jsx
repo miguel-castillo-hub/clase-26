@@ -129,18 +129,18 @@ const Home = () => {
         <section>
           <h2 className="productostitulo">Nuestros productos</h2>
           <p className="productosparrafo">Elegí entre nuestras categorías más populares.</p>
-          <div>
+          <div className="productos">
             {
-              products.map((product) => <div key={product.id}>
+              products.map((product) => <div className="producto" key={product.id}>
                 <h2 key={product.id}>{product.title}</h2>
                 <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-                <p>${product.price}</p>
-                <p>{product.description}</p>
-                <p><strong>{product.category}</strong></p>
+                <p className="precio">${product.price}</p>
+                <p className="descprod">{product.description}</p>
+                <p className="categoria"><strong>{product.category}</strong></p>
                 {
                   user && <div>
-                    <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
-                    <button onClick={() => handleDelete(product.id)}>Borrar</button>
+                    <button className="botonprod" onClick={() => handleOpenEdit(product)}>Actualizar</button>
+                    <button className="botonprod" onClick={() => handleDelete(product.id)}>Borrar</button>
                   </div>
                 }
               </div>)

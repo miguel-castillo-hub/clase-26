@@ -134,3 +134,78 @@
   padding: 10px;
   margin-bottom: 10px;
 }
+
+/* PRODUCTOS */
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax (400px, 1fr));
+  gap: 15px;
+}
+
+.producto {
+  width: 600px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 30px;
+}
+
+.productos h2 {
+  color: rgb(16, 16, 189);
+  font-style: italic;
+}
+
+.productos img {
+  width: 130px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.precio {
+  font-size: 50px;
+  color: rgb(113, 99, 202);
+  font-weight: bolder;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descprod {
+  color: darkblue;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.categoria {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.botonprod {
+  background-color: white;
+  color: darkcyan;
+  font-size: 25px;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 800;
+  border-radius: 15px;
+  font-style: italic;
+}
+
+.botonprod:hover {
+  background-color: aqua;
+  padding: 12px;
+}

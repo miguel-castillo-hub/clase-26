@@ -162,6 +162,7 @@
 .productos img {
   width: 130px;
   display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   padding: 10px;
@@ -216,6 +217,63 @@
   font-size: 15px;
   font-style: italic;
   display: flex;
+  justify-content: center;
   text-align: center;
   padding: 30px;
+  border-top-style: solid;
+}
+
+/* LOGIN */
+
+.login-h1 {
+  color: darkblue;
+  font-size: 40px;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.login-form h2 {
+  color: blueviolet;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form input {
+  padding: 5px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.login-form label {
+  color: darkblue;
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.login-form button {
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: aquamarine;
+}
+
+.login-form button:hover {
+  background-color: rgb(80, 192, 155);
+  color: white;
+  padding: 12px;
 }

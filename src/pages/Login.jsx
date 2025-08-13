@@ -25,15 +25,14 @@ const Login = () => {
 
   return (
     <Layout background="red">
-      <h1>Inicia sesión</h1>
+      <h1 className="login-h1">Inicia sesión</h1>
 
-      <section>
+      <section className="login-form">
         <h2>Hola, bienvenido</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <label>Nombre de usuario: </label>
-            <input
-              type="text"
+            <input type="text"
               onChange={(e) => setUsername(e.target.value)}
               value={username}
             />

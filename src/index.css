@@ -209,3 +209,13 @@
   background-color: aqua;
   padding: 12px;
 }
+
+/* FOOTER */
+
+.footer {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  text-align: center;
+  padding: 30px;
+}

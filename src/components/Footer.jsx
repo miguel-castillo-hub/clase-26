@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer style={{ backgroundColor: "lightblue" }}>
+      <footer className="footer" style={{ textAlign: "center" }}>
         <p>Sitio desarrollado por mí mismito</p>
       </footer>
     </>

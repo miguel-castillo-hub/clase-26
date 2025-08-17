@@ -41,6 +41,7 @@
   margin: 15px;
   color: cyan;
   font-weight: 400;
+  text-decoration: none;
 }
 
 .cabeza nav ul li navlink {
@@ -255,6 +256,18 @@
   font-size: 20px;
 }
 
+.login-form textarea {
+  padding: 5px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  resize: none;
+}
+
 .login-form label {
   color: darkblue;
   font-size: 20px;
@@ -278,4 +291,6 @@
   padding: 12px;
 }
 
-/* REGISTER */
+/* RESPONSIVE */
+
+@media (max-width:880px) {}

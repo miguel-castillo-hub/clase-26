@@ -51,9 +51,9 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <h1>Panel de Administración</h1>
+      <h1 className="login-h1">Panel de Administración</h1>
 
-      <section>
+      <section className="login-form">
         <h2>Cargar nuevo producto</h2>
         <form onSubmit={handleSubmit}>
           <div>

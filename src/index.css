@@ -223,7 +223,7 @@
   border-top-style: solid;
 }
 
-/* LOGIN */
+/* LOGIN Y REGISTER */
 
 .login-h1 {
   color: darkblue;
@@ -277,3 +277,5 @@
   color: white;
   padding: 12px;
 }
+
+/* REGISTER */

@@ -25,6 +25,7 @@ const UserProvider = (props) => {
   }
   const register = async (newUser) => {
     console.log("registrado", newUser)
+    setUser(true)
   }
   const logout = () => {
     setUser(null)

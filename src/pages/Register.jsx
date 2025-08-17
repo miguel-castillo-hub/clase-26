@@ -25,10 +25,9 @@ const Register = () => {
       email: email,
       password: password
     }
-    const response = await register(newUser)
 
-    console.log(response)
     setSuccess("Usuario registrado")
+    register(true)
 
     setUsername("")
     setEmail("")

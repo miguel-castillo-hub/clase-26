@@ -17,6 +17,7 @@ const Header = () => {
             {/* Solo mostrar si hay usuario logeado */}
             {
               user && <>
+                <li><Link to="/aboutus">Sobre Nosotros</Link></li>
                 <li><Link to="/">Inicio</Link></li>
                 <li><Link to="/dashboard">Dashboard</Link></li>
                 <button onClick={handleLogout}>Cerrar sesión</button>
@@ -25,6 +26,7 @@ const Header = () => {
             {/* Solo mostrar a usuarios no logeados */}
             {
               !user && <>
+                <li><Link to="/aboutus">Sobre Nosotros</Link></li>
                 <li><Link to="/login">Login</Link></li>
                 <li><Link to="/register">Regístrate</Link></li></>
             }

@@ -46,7 +46,7 @@ const Home = () => {
     setImageEdit(product.image)
   }
 
-  // petición al backend mediante fetch para modificar -> métido PATCH / PUT https://fakeproductapi.com/product
+  // petición al backend mediante fetch para modificar -> método PATCH / PUT https://fakeproductapi.com/product
   const handleUpdate = async (e) => {
     e.preventDefault()
 
@@ -82,6 +82,11 @@ const Home = () => {
     } catch (error) {
       console.log(error)
     }
+
+    const handleFind = (e) => {
+      e.preventDefault()
+      console.log("cambió")
+    }
   }
 
   return (
@@ -90,7 +95,6 @@ const Home = () => {
         <section className="casa">
           <h1>Bienvenido a Nuestra Tienda</h1>
           <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
-
           {
             productToEdit && <section className="popup-edit">
               <h2>Editando producto.</h2>
@@ -129,6 +133,8 @@ const Home = () => {
         <section>
           <h2 className="productostitulo">Nuestros productos</h2>
           <p className="productosparrafo">Elegí entre nuestras categorías más populares.</p>
+          <input type="text" placeholder="Busca" onChange={() => handleFind(e)} />
+
           <div className="productos">
             {
               products.map((product) => <div className="producto" key={product.id}>

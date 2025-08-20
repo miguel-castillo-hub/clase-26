@@ -6,7 +6,8 @@ const AboutUs = () => {
   return (
     <Layout>
       <section className="about-us">
-        <h1>¿Qué es este proyecto?</h1>
+        <h1>Sobre nosotros</h1>
+        <h2>¿Qué es este proyecto?</h2>
         <p>Tienda virtual es un proyecto inspirado en tiendas virtuales como Mercado Libre o Aliexpress, con una interfaz sencilla donde los usuarios que iniciaron sesión pueden importar sus propios productos y editar los ya existentes.</p>
         <p>Este producto está dirigido para quienes desean aprender un poco sobre React y sus propiedades, con el propósito de practicar mejor el proceso de codificar una página web, contando con tecnologías como:</p>
         <ul>

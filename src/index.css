@@ -212,6 +212,49 @@
   padding: 12px;
 }
 
+/* SOBRE NOSOTROS */
+
+.about-us h1 {
+  color: darkblue;
+  font-size: 40px;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.about-us h2 {
+  font-size: 35px;
+  font-style: italic;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  color: darkblue;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.about-us ul li {
+  background-color: rgb(219, 232, 255);
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  margin: 20px;
+  list-style: none;
+}
+
+.elemento-react {
+  font-weight: 900;
+}
+
 /* FOOTER */
 
 .footer {

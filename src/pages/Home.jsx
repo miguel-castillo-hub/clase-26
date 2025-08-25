@@ -15,6 +15,19 @@ const Home = () => {
 
   const { user } = useAuth()
 
+  const handleSearchChange = async (e) => {
+    try {
+      const response = await fetch("https://fakestoreapi.com/products/", { method: "GET" })
+      const data = await response.json()
+      let datosDeLaAPI = data;
+
+      console.log(datosDeLaAPI)
+    } catch (error) {
+      console.error("Error al obtener los datos")
+    }
+  }
+  handleSearchChange();
+
   const fetchingProducts = async () => {
     const response = await fetch("https://fakestoreapi.com/products", { method: "GET" })
     const data = await response.json()
@@ -82,11 +95,6 @@ const Home = () => {
     } catch (error) {
       console.log(error)
     }
-
-    const handleFind = (e) => {
-      e.preventDefault()
-      console.log("cambió")
-    }
   }
 
   return (
@@ -130,10 +138,16 @@ const Home = () => {
           </ul>
         </section>
 
+        {/* BUSQUEDA */}
+
         <section>
           <h2 className="productostitulo">Nuestros productos</h2>
           <p className="productosparrafo">Elegí entre nuestras categorías más populares.</p>
-          <input type="text" placeholder="Busca" onChange={() => handleFind(e)} />
+          <input
+            type="search"
+            label="Buscar..."
+            onChange={handleSearchChange}
+          />
 
           <div className="productos">
             {

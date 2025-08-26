@@ -16,6 +16,7 @@ const Home = () => {
   const { user } = useAuth()
 
   const handleSearchChange = async (e) => {
+
     try {
       const response = await fetch("https://fakestoreapi.com/products/", { method: "GET" })
       const data = await response.json()
@@ -25,8 +26,9 @@ const Home = () => {
     } catch (error) {
       console.error("Error al obtener los datos")
     }
-  }
-  handleSearchChange();
+  };
+
+  handleSearchChange(products);
 
   const fetchingProducts = async () => {
     const response = await fetch("https://fakestoreapi.com/products", { method: "GET" })
@@ -146,13 +148,14 @@ const Home = () => {
           <input
             type="search"
             label="Buscar..."
+            id={searchInput}
             onChange={handleSearchChange}
           />
 
           <div className="productos">
             {
               products.map((product) => <div className="producto" key={product.id}>
-                <h2 key={product.id}>{product.title}</h2>
+                <h2 id="productName" key={product.id}>{product.title}</h2>
                 <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
                 <p className="precio">${product.price}</p>
                 <p className="descprod">{product.description}</p>
